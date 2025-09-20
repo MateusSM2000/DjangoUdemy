@@ -4,4 +4,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('home view')
+    return HttpResponse('home view app 1')
