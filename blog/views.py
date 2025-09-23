@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 
 def my_view(request):
-    return HttpResponse('blog view app 1')
+    return render(request, 'blog/index.html')
 
 def articles_view(request):
-    return HttpResponse('blog/articles view')
+    return render(request, 'blog/articles.html')
