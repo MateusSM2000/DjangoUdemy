@@ -1,5 +1,10 @@
 {% extends 'global/base.html' %}
 
+{% load static %}
+{% block css_path %}
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+{% endblock css_path %}
+
 {% block texto %}
     {{text}}
 {% endblock texto %}
