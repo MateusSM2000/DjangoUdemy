@@ -15,8 +15,10 @@
 
     <h1>{% block texto %}{% endblock texto %}</h1>
 
-    <main class="posts">
-        {% include 'global/partials/postblock.html' %}
-    </main>
+    {% block home_content %}{% endblock home_content %}
+
+    {% block blog_content %}{% endblock blog_content %}
+
+    {% block articles_content %}{% endblock articles_content %}
 </body>
 </html>
