@@ -1,9 +1,15 @@
+body {
+    background: purple;
+}
+
 .post {
     background: black;
     padding: 1.5rem;
     box-shadow: 1rem 0.5rem 1rem rgba(0,0,0, 0.7);
 }
 
-body {
-    background: purple;
+@media (min-width: 600px) {
+    .content {
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    }
 }
