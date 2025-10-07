@@ -11,6 +11,8 @@
 
 {% block blog_content %}
     <main class="content">
-        {% include 'global/partials/postblock.html' %}
+        {% for post in posts %}
+            {% include 'global/partials/postblock.html' %}
+        {% endfor %}
     </main>
 {% endblock blog_content %}
