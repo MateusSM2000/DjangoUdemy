@@ -12,7 +12,6 @@ def my_view(request):
         posts = [{'Erro ao buscar os dados': response.status_code}]
 
     context = {
-        'text': 'BLOG',
         'title': '- Blog',
         'posts': posts,
     }
