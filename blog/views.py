@@ -33,9 +33,19 @@ def post_view(request, id):
     else:
         posts = [{'Erro ao buscar os dados': response.status_code}]
 
+    found_post = None
+    for post in posts:
+        if post['id'] == id:
+            found_post = post
+            break
+    if found_post is None:
+        raise Exception('Post not found')
+
     context = {
-        'title': '- Blog',
-        'posts': posts,
+        'title': f'- {found_post['title']}',
+        'post': found_post,
     }
 
-    return render(request, 'blog/index.html', context)
+    print([post for post in posts if post['id'] == id])
+
+    return render(request, 'blog/post.html', context)
