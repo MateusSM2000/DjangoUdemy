@@ -1,0 +1,26 @@
+{% extends 'global/base.html' %}
+
+{% load static %}
+{% block css_path %}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+{% endblock css_path %}
+
+{% block texto %}
+    {{text}}
+{% endblock texto %}
+
+{% block blog_content %}
+    <main class="content">
+        <article class="post single-post">
+            <header>
+                <h2 class="post__title">
+                    {{post.title}}
+                </h2>
+            </header>
+
+            <div class="post__body">
+                {{post.body}}
+            </div>
+        </article>
+    </main>
+{% endblock blog_content %}
